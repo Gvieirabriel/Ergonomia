@@ -139,6 +139,7 @@ var quiz = [
 	            $('#choice-block').empty();
 	            $('#submitbutton').remove();
 	            $('#question').text("Você acertou " + score + " de " + quiz.length + " questões.");
+	            $('#pager').remove();
 	        }
 	        /**
 	         * Runs the first time and creates all of the elements for the quiz
