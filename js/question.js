@@ -121,7 +121,7 @@ var quiz = [
 	                $(this).css({'border-color':'#fff','font-weight':700,'background-color':'#c1c1c1'});
 	                if(submt){
 	                    submt=false;
-	                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+	                    $('#submitbutton').css({'color':'#fff'}).on('click', function(){
 	                        $('.choice').off('click');
 	                        $(this).off('click');
 	                        processQuestion(picked);
