@@ -91,3 +91,8 @@
 	});
 
 })(jQuery);
+
+function myFunction() {
+    document.getElementById("formulario").innerHTML = "";
+    document.getElementById('frame').style.display = 'block';
+}
