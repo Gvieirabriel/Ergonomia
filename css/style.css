@@ -193,7 +193,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     opacity: 1;
 }
 
-img.question-image{display:block;max-width:250px;margin:10px auto;border:1px solid #ccc;width:100%;height:auto;}
+img.question-image{
+    display:block;max-width:250px;margin:10px auto;border:1px solid #ccc;width:100%;height:auto;
+}
+
 #choice-block{
     display:block;
     list-style:none;
