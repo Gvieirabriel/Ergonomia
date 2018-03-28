@@ -173,3 +173,65 @@ var quiz = [
 	        
 	        init();
 	    });
+
+function activityAdditionGenerate() {
+  var randomNumber1 = Math.floor((Math.random() * 51)) + 20;
+  var randomNumber2 = Math.floor((Math.random() * 51)) + 10;
+
+  $('#additionactivity').text(randomNumber1.toString(2) + ' + ' + randomNumber2.toString(2));
+
+  $('#additionanswer').hide().text((randomNumber1 + randomNumber2).toString(2) + ' ( ' + (randomNumber1 + randomNumber2) + ' )');
+}
+
+function additionShow() {
+  $('#additionanswer').show();
+}
+
+function activityMultiplicationGenerate() {
+  var randomNumber1 = Math.floor((Math.random() * 11)) + 20;
+  var randomNumber2 = Math.floor((Math.random() * 7)) + 1;
+
+  $('#multiplicationactivity').text(randomNumber1.toString(2) + ' x ' + randomNumber2.toString(2));
+
+  $('#multiplicationanswer').hide().text((randomNumber1 * randomNumber2).toString(2) + ' ( ' + (randomNumber1 * randomNumber2) + ' )');
+}
+
+function multiplicationShow() {
+  $('#multiplicationanswer').show();
+}
+
+function activitySubtractionGenerate() {
+  var randomNumber1 = Math.floor((Math.random() * 50)) + 30;
+  var randomNumber2 = Math.floor((Math.random() * 20)) + 10;
+
+  $('#subtractionactivity').text(randomNumber1.toString(2) + ' - ' + randomNumber2.toString(2));
+
+  $('#subtractionanswer').hide().text((randomNumber1 - randomNumber2).toString(2) + ' ( ' + (randomNumber1 - randomNumber2) + ' )');
+}
+
+function subtractionShow() {
+  $('#subtractionanswer').show();
+}
+
+function activityDivisionGenerate() {
+  var randomNumber1 = Math.floor((Math.random() * 30)) + 10;
+  var randomNumber2 = Math.floor((Math.random() * 5)) + 2;
+
+  var remainder = randomNumber1 % randomNumber2;
+  var answer = (randomNumber1 - remainder) / randomNumber2;
+
+  $('#divisionactivity').text(randomNumber1.toString(2) + ' / ' + randomNumber2.toString(2));
+
+  $('#divisionanswer').hide().text(answer.toString(2) + ' ( Sobra: ' + remainder.toString(2) + ' )');
+}
+
+function divisionShow() {
+  $('#divisionanswer').show();
+}
+
+function generateAll() {
+  activityAdditionGenerate();
+  activityMultiplicationGenerate();
+  activitySubtractionGenerate();
+  activityDivisionGenerate();
+}

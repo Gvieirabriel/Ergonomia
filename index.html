@@ -109,10 +109,24 @@
 					<div class="section-header text-left">
 						<h2 class="title">Operações</h2>
 					</div>
-
-					<h3 id="soma" class="title text-left">Soma</h3>
-					<p>A origem de todas as outras operações. Nós vamos ter que aprender de novo a somar, isto é, vamos ter que decompor passo a passo aquilo que fazemos intuitivamente desde os primeiros anos de escola, para podermos determinar o algoritmo da soma. E agora vamos ter que o fazer com números binários, começando por o fazer da forma mais intuitiva, tal como na escola, considerando exatamente os mesmos passos que aprendemos para a base 10.</p>
+					<p>
+						As operações com binários não são muito diferentes das que estamos acostumados a fazer com os números decimais. Os procedimentos a se fazer são os mesmos, como operar unidade por unidade ou dezena por dezena e assim por diante. A única diferença é que estamos usando agora somente dois números: 0 e 1.
+					</p>
 					</br>
+					<h3 id="soma" class="title text-left">Soma</h3>
+					<p>A origem de todas as outras operações. Nós vamos ter que aprender de novo a somar, isto é, vamos ter que decompor passo a passo aquilo que fazemos intuitivamente desde os primeiros anos de escola, para podermos determinar o algoritmo da soma. E agora vamos ter que o fazer com números binários, começando por o fazer da forma mais intuitiva, tal como na escola, considerando exatamente os mesmos passos que aprendemos para a base 10.</br>
+					</br>
+					Decimal:</br>
+					1 + 0 = 1</br>
+					2 + 0 = 2</br>
+					3 + 0 = 3</br>
+					</br>
+					Binário (as quatro possibilidades básicas):</br>
+					0 + 0 = 0</br>
+					0 + 1 = 1</br>
+					1 + 0 = 1</br>
+					1 + 1 = 0 (subindo uma unidade na soma, o que chamamos casualmente de "sobe um" e com o termo para aritmética binária "Carry")</br>
+					</p>
 					<div class="feature"> 
 						<i class="fa fa-film"></i>
 						<h4 class="text-left">Demonstração em Vídeo</h4>
@@ -125,17 +139,48 @@
 					</br>
 
 					<h3 id="subtracao" class="title text-left">Subtração</h3>
-					<p>Qui dolorem ipsum quia dolor sit amet rings of Uranus the only home we've ever known rings of Uranus prime number Flatland consectetur adipisicing elit billions upon billions Flatland. Decipherment, brain is the seed of intelligence tendrils of gossamer clouds, quasar worldlets, tendrils of gossamer clouds cosmic ocean. Encyclopaedia galactica are creatures of the cosmos realm of the galaxies. Drake Equation! At the edge of forever sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, not a sunrise but a galaxyrise the carbon in our apple pies? A mote of dust suspended in a sunbeam the sky calls to us realm of the galaxies of brilliant syntheses and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+					<p>Com a subtração binária, começa a ficar um pouco mais complexo (mas não tão difícil). Semelhante à adição binária, trabalharemos os números coluna por coluna e emprestaremos de volta (quando necessário). Estrutura da operação é minuendo - subtraendo = diferença
+					</br>
+					Decimal:</br>
+					1 - 0 = 1</br>
+					2 - 0 = 2</br>
+					3 - 0 = 3</br>
+					3 - 2 = 1</br>
+					4 -3 = 1</br>
+					2 - 2 = 0</br>
+					</br>
+					Binário (as quatro operações básicas):</br>
+					0 - 0 = 0</br>
+					1 - 0 = 1</br>
+					1 - 1 = 0</br>
+					0 - 1 = 1 (onde o 0 empresta 1 do vizinho ao lado esquerdo, deste modo a operação fica 10 - 1 = 1 ou na base 10: 2 - 1 = 1)</br>
+					</p>
 
 					</br>
 
 					<h3 id="multiplicacao" class="title text-left">Multiplicação</h3>
-					<p>Qui dolorem ipsum quia dolor sit amet rings of Uranus the only home we've ever known rings of Uranus prime number Flatland consectetur adipisicing elit billions upon billions Flatland. Decipherment, brain is the seed of intelligence tendrils of gossamer clouds, quasar worldlets, tendrils of gossamer clouds cosmic ocean. Encyclopaedia galactica are creatures of the cosmos realm of the galaxies. Drake Equation! At the edge of forever sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, not a sunrise but a galaxyrise the carbon in our apple pies? A mote of dust suspended in a sunbeam the sky calls to us realm of the galaxies of brilliant syntheses and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+					<p>A multiplicação possui como centro a propriedade comutativa (“a ordem dos fatores não altera o produto”), ou seja A*B = B*A. Neste caso temos as operações básicas em binários:</br>
+					</br>
+					0 * 0 = 0</br>
+					0 * 1 = 0</br>
+					1 * 0 = 0</br>
+					1 * 1 = 1</br>
+					</br>
+					Na multiplicação (a mais simples operação de todas), tudo o que é multiplicado por 0 terá como resultado final 0.
+					</p>
 
 					</br>
 
 					<h3 id="divisao" class="title text-left">Divisão</h3>
-					<p>Qui dolorem ipsum quia dolor sit amet rings of Uranus the only home we've ever known rings of Uranus prime number Flatland consectetur adipisicing elit billions upon billions Flatland. Decipherment, brain is the seed of intelligence tendrils of gossamer clouds, quasar worldlets, tendrils of gossamer clouds cosmic ocean. Encyclopaedia galactica are creatures of the cosmos realm of the galaxies. Drake Equation! At the edge of forever sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, not a sunrise but a galaxyrise the carbon in our apple pies? A mote of dust suspended in a sunbeam the sky calls to us realm of the galaxies of brilliant syntheses and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+					<p>
+					A divisão possui como estrutura: divisor / dividendo = quociente.
+					</br></br>
+					0 / 0 = Não existe, assim comos nos decimais</br>
+					0 / 1 = 0</br>
+					1 / 0 = Não existe, assim como como nos decimais</br>
+					1 / 1 = 1</br>
+					</br>
+					</p>
 			</div>
 			<!-- /Row -->
 
@@ -150,8 +195,51 @@
 				<div class="section-header text-left">
 					<h2 class="title">Conclusão</h2>
 					<p  align="left">
-						Qui dolorem ipsum quia dolor sit amet rings of Uranus the only home we've ever known rings of Uranus prime number Flatland consectetur adipisicing elit billions upon billions Flatland. Decipherment, brain is the seed of intelligence tendrils of gossamer clouds, quasar worldlets, tendrils of gossamer clouds cosmic ocean. Encyclopaedia galactica are creatures of the cosmos realm of the galaxies. Drake Equation! At the edge of forever sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, not a sunrise but a galaxyrise the carbon in our apple pies? A mote of dust suspended in a sunbeam the sky calls to us realm of the galaxies of brilliant syntheses and billions upon billions upon billions upon billions upon billions upon billions upon billions.
-					<p>
+				    Subtração: subtraendo = diferença</br>
+					Multiplicação: Lembre-se que tudo multiplicado por 0 resulta em 0</br>
+					Divisão: divisor / dividendo = quociente</br>
+					Algumas sugestões são:</br>
+				    Para números menores (5 dígitos ou menos) adquira o hábito de convertê-los mentalmente em decimal (por exemplo, para 101 você pode dizer: "Ah, isso é 1 mais 0 mais 4, que é 5"). Isso ajuda a dar-lhes significado, em vez de apenas serem coisas abstratas em que você está realizando ações aleatórias.
+				    Aprender binário é como andar de bicicleta, a melhor maneira é fazendo por tanto deixamos aqui uma ferramenta para seus estudos, podendo gerar valores aleatórios para treinar:
+					<p></br>
+					<h3 class="text-left">Gerador de Operações Binárias:</h3>
+					<ul class='activities'>
+						<li>
+							<span class='questiontitle'>Adição: </span></br>
+							<input class="btn btn-info" type='button' value='Gerar' id='questionadditiongenerate' onclick="activityAdditionGenerate()">
+							<span id='additionactivity' class='activityquestion'></span>
+							<input class="btn btn-info" type='button' value='Resposta' id='additionshow' onclick="additionShow()">
+							<span id='additionanswer' class='activityanswer'></span>
+						</li>
+						</br>
+						<li>
+							<span class='questiontitle'>Multiplicação: </span></br>
+							<input class="btn btn-info" type='button' value='Gerar' id='questionmultiplicationgenerate' onclick="activityMultiplicationGenerate()">
+							<span id='multiplicationactivity' class='activityquestion'></span>
+							<input class="btn btn-info" type='button' value='Resposta' id='multiplicationshow' onclick="multiplicationShow()">
+							<span id='multiplicationanswer' class='activityanswer'></span>
+						</li>
+						</br>
+						<li>
+							<span class='questiontitle'>Subtração: </span></br>
+							<input class="btn btn-info" type='button' value='Gerar' id='questionsubtractiongenerate' onclick="activitySubtractionGenerate()">
+							<span id='subtractionactivity' class='activityquestion'></span>
+							<input class="btn btn-info" type='button' value='Resposta' id='subtractionshow' onclick="subtractionShow()">
+							<span id='subtractionanswer' class='activityanswer'></span>
+						</li>
+						</br>
+						<li>
+							<span class='questiontitle'>Divisão: </span></br>
+							<input class="btn btn-info" type='button' value='Gerar' id='questiondivisiongenerate' onclick="activityDivisionGenerate()">
+							<span id='divisionactivity' class='activityquestion'></span>
+							<input class="btn btn-info" type='button' value='Resposta' id='divisionshow' onclick="divisionShow()">
+							<span id='divisionanswer' class='activityanswer'></span>
+						</li>
+						</br>
+						<li>
+						<span class='questiontitle'></span>
+						<input class="btn btn-info" type='button' value='Gerar para todos' id='generateall' onclick="generateAll()">
+					</ul>
 				</div>
 			</div>
 		</div>
