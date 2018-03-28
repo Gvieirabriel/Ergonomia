@@ -222,7 +222,7 @@ function activityDivisionGenerate() {
 
   $('#divisionactivity').text(randomNumber1.toString(2) + ' / ' + randomNumber2.toString(2));
 
-  $('#divisionanswer').hide().text(answer.toString(2) + ' ( Sobra: ' + remainder.toString(2) + ' )');
+  $('#divisionanswer').hide().text(answer.toString(2) + ' ( ' + Math.floor(randomNumber1 / randomNumber2) + ' e sobra ' + remainder.toString(2) + ' )');
 }
 
 function divisionShow() {
