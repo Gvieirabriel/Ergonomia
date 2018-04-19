@@ -53,46 +53,36 @@
 		// Back To Top Appear
 		wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
 	});
-
-	///////////////////////////
-	// magnificPopup
-	$('.work').magnificPopup({
-		delegate: '.lightbox',
-		type: 'image'
-	});
-
-	///////////////////////////
-	// Owl Carousel
-	$('#about-slider').owlCarousel({
-		items:1,
-		loop:true,
-		margin:15,
-		nav: true,
-		navText : ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-		dots : true,
-		autoplay : true,
-		animateOut: 'fadeOut'
-	});
-
-	$('#testimonial-slider').owlCarousel({
-		loop:true,
-		margin:15,
-		dots : true,
-		nav: false,
-		autoplay : true,
-		responsive:{
-			0: {
-				items:1
-			},
-			992:{
-				items:2
-			}
-		}
-	});
-
 })(jQuery);
 
 function myFunction() {
-    document.getElementById("formulario").innerHTML = "";
+    document.getElementById("submit").innerHTML = "";
     document.getElementById('frame').style.display = 'block';
 }
+
+$(document).on('ready', function() {  
+  var winHeight = $(window).height(), 
+      docHeight = $(document).height(),
+      max, value;
+
+  /* Set the max scrollable area */
+  max = docHeight/1.4 - winHeight;
+  document.getElementById("progress-bar").setAttribute("aria-valuemax",max);
+  console.log(document.getElementById("progress-bar").getAttribute("aria-valuemax"))
+
+  $(document).on('scroll', function(){
+     value = $(window).scrollTop();
+     document.getElementById("progress-bar").style.width = (value/max)*100+"%";
+  });
+});
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycby9u4b1fzPAwqA71TdqS_XPAFExBhS1DgPpr2CaDVDQD7L0cmY/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+      myFunction();
+  })
