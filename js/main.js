@@ -56,7 +56,7 @@
 })(jQuery);
 
 function myFunction() {
-    document.getElementById("submit").innerHTML = "";
+    document.getElementById("submit").style.display = 'none';
     document.getElementById('frame').style.display = 'block';
 }
 
@@ -66,7 +66,7 @@ $(document).on('ready', function() {
       max, value;
 
   /* Set the max scrollable area */
-  max = docHeight/1.4 - winHeight;
+  max = docHeight/1.3 - winHeight;
   document.getElementById("progress-bar").setAttribute("aria-valuemax",max);
   console.log(document.getElementById("progress-bar").getAttribute("aria-valuemax"))
 
@@ -81,8 +81,5 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycby9u4b1fzPAwqA71TdqS_
 
   form.addEventListener('submit', e => {
     e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
       myFunction();
   })

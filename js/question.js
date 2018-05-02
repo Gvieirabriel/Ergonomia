@@ -1,39 +1,63 @@
 var quiz = [
 	        {
-	            "question"      :   "1 - Qual o resultado da seguinte subtração	?",
-	            "image"         :   "https://class.daytonastate.edu/d2l/common/viewFile.d2lfile/Database/MzIzMTk0NQ/cet3116_fex_FA13fin.png?ou=285721",
+	            "question"      :   "1 - Qual é o resultado da soma a seguir em Binários?",
+	            "image"         :   "./img/image5.png",
 	            "choices"       :   [
-	                                    "110011",
-	                                    "111011",
-	                                    "111001",
-	                                    "110110",
+	                                    "1 1 1 1 1 1 1 0",
+	                                    "0 0 0 1 0 0 1 0",
+	                                    "0 0 0 1 1 1 1 0",
+	                                    "0 0 0 0 0 0 0 1",
 	                                ],
-	            "correct"       :   "110011",
+	            "correct"       :   "0 0 0 1 1 1 1 0",
 	            "explanation"   :   "",
 	        },
 	        {
-	            "question"      :   "2 - Teste2?",
-	            "image"         :   "",
+	            "question"      :   "2 - Qual é o resultado da subtração a seguir em Binários?",
+	            "image"         :   "./img/image1.png",
 	            "choices"       :   [
-	                                    "Opt 1",
-	                                    "Opt 2",
-	                                    "Opt 3",
-	                                    "Opt 4"
+	                                    "1 0 0 0 ",
+	                                    "1 1 0 1 0",
+	                                    "1 0 0 1",
+	                                    "1 0 1 0"
 	                                ],
-	            "correct"       :   "Opt 2",
-	            "explanation"   :   "Pq opt2",
+	            "correct"       :   "1 0 1 0",
+	            "explanation"   :   "",
 	        },
 	        {
-	            "question"      :   "3 - Teste3?",
-	            "image"         :   "",
+	            "question"      :   "3 - Qual é o resultado da multiplicação a seguir em Binários?",
+	            "image"         :   "./img/image4.png",
 	            "choices"       :   [
-	                                    "Opt 1",
-	                                    "Opt 2",
-	                                    "Opt 3",
-	                                    "Opt 4"
+	                                    "1 0 0 0 0 0",
+	                                    "1 1 1 0 1 1",
+	                                    "1 0 0 1 0 1",
+	                                    "1 0 0 0 0 1"
 	                                ],
-	            "correct"       :   "Opt 3",
-	            "explanation"   :   "Pq opt3",
+	            "correct"       :   "1 0 0 0 0 1",
+	            "explanation"   :   "",
+	        },
+	        {
+	            "question"      :   "4 - Qual é o resultado da divisão a seguir em Binários?",
+	            "image"         :   "./img/image2.png",
+	            "choices"       :   [
+	                                    "1 1 1 1 1 1",
+	                                    "1 0 0 1",
+	                                    "1 0 1 1",
+	                                    "1 1 1 1"
+	                                ],
+	            "correct"       :   "1 0 1 1",
+	            "explanation"   :   "",
+	        },
+	        {
+	            "question"      :   "5 - Qual Sistema matemático foi essencial para desenvolvimento do sistema Binário?",
+	            "image"         :   "./img/image3.png",
+	            "choices"       :   [
+	                                    "Geométrico",
+	                                    "Aritmético",
+	                                    "Cartesiano",
+	                                    "Booleano"
+	                                ],
+	            "correct"       :   "Booleano",
+	            "explanation"   :   "",
 	        },
 	    ];
 	    
@@ -138,7 +162,18 @@ var quiz = [
 	            $('#question').empty();
 	            $('#choice-block').empty();
 	            $('#submitbutton').remove();
+	            $('#question-image').remove();
 	            $('#question').text("Você acertou " + score + " de " + quiz.length + " questões.");
+	            
+	            const scriptURL = 'https://script.google.com/macros/s/AKfycby9u4b1fzPAwqA71TdqS_XPAFExBhS1DgPpr2CaDVDQD7L0cmY/exec'
+  				const form = document.forms['submit-to-google-sheet']
+
+	            document.getElementById("acertos").value = score;
+
+	             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			      .then(response => console.log('Success!', response))
+			      .catch(error => console.error('Error!', error.message))
+
 	            $('#pager').remove();
 	        }
 	        /**

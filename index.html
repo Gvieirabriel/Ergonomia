@@ -93,13 +93,21 @@
 				<div class="section-header text-left">
 					<h2 class="title">Introdução</h2>
 					<p  align="left">
-						Os computadores trabalham com um sistema matemático que utiliza dois caracteres para  manipular qualquer informação, isso quer dizer que todas as operações o computador faz utilizando apenas dois caracteres, que por convenção são os dígitos “0” (zero) e “1” (um), daí podemos concluir que para 0 temos desligado, sem sinal, e para 1 temos ligado ou com sinal, esses são os dígitos binários ou somente bit (conjunção de duas palavras da língua inglesa binary digit), que é a menor unidade de informação dos computadores. 
+						Os computadores trabalham com um sistema matemático que utiliza dois caracteres para  manipular qualquer informação, isso quer dizer que todas as operações o computador faz utilizando apenas dois caracteres, que por convenção são os dígitos “0” (zero) e “1” (um), daí podemos concluir que para 0 temos desligado, sem sinal, e para 1 temos ligado ou com sinal, esses são os dígitos binários ou somente bit (conjunção de duas palavras da língua inglesa binary digit), que é a menor unidade de informação dos computadores.
 					<p>
+					<p  align="left">
+						Um outro termo importante para este tema, é o “Registrador”. Em computação, um registrador é um uma memória que armazena n bits. Os registradores, estão no topo da hierarquia das memórias, apresentando maior maior velocidade e custo. Os registradores na computação são de diversos tipos, porém os principais são os que armazenam dados. Para este conteúdo, os registradores armazenam o vetor de bits que representam os números decimais:
+					</p>
 					</br>
-					<audio controls>
-	  					<source  src="" type="audio/mpeg">
-						Seu Browser não suporta o player.
-					</audio>
+					<div class="text-center">
+						<img src="./img/byte.jpg" class="rounded" alt="...">
+					</div>
+					</br>
+					<p align="left">
+						Abaixo temos uma narração breve sobre o histórico do sistema de numeração binário:
+					</p>
+					</br>
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/438079761&color=%230066cc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 				</div>
 			</div>
 		</div>
@@ -115,12 +123,24 @@
 						<h2 class="title">Operações</h2>
 					</div>
 					<p>
-						As operações com binários não são muito diferentes das que estamos acostumados a fazer com os números decimais. Os procedimentos a se fazer são os mesmos, como operar unidade por unidade ou dezena por dezena e assim por diante. A única diferença é que estamos usando agora somente dois números: 0 e 1.
+						As operações com binários não são muito diferentes das que estamos acostumados a fazer com os números decimais. Os procedimentos a se fazer são os mesmos, como por exemplo, operar unidade por unidade ou dezena por dezena e assim por diante.
+					</p>
+					<p>
+						A única diferença agora é que estamos usando somente dois números: 0 e 1 ou seja, imagine que os números 194 e 108 da 1ª operação matemática serão agora representados por 0’s e 1’s. O processo para operações matemáticas seria o mesmo nestes casos.
 					</p>
 					</br>
 					<h3 id="soma" class="title text-left">Soma</h3>
-					<p>A origem de todas as outras operações. Nós vamos ter que aprender de novo a somar, isto é, vamos ter que decompor passo a passo aquilo que fazemos intuitivamente desde os primeiros anos de escola, para podermos determinar o algoritmo da soma. E agora vamos ter que o fazer com números binários, começando por o fazer da forma mais intuitiva, tal como na escola, considerando exatamente os mesmos passos que aprendemos para a base 10.</br>
+					<p>A soma consiste em um dado (A) adicionado a outro dado (B) que possui como saída um resultado (R). Considerando exatamente os mesmos passos que aprendemos para a base 10.</p>
+					Pontos principais a se considerar:
 					</br>
+					</p>
+					<p>
+					<ul>
+						<li type="circle">É necessário considerar que o número 0 é um elemento neutro (qualquer elementos somado a 0 eh esse elemento)</li>
+						<li type="circle">Carry ou “vai um” é a operação de subir uma unidade na soma</li>
+						<li type="circle">Os números tratados são do tipo inteiros positivos, por mais que seja possível também aplicar em números reais</li>
+					</ul>
+					</p>
 					Decimal:</br>
 					1 + 0 = 1</br>
 					2 + 0 = 2</br>
@@ -132,6 +152,7 @@
 					1 + 0 = 1</br>
 					1 + 1 = 0 (subindo uma unidade na soma, o que chamamos casualmente de "sobe um" e com o termo para aritmética binária "Carry")</br>
 					</p>
+					</br>
 					<div class="feature"> 
 						<i class="fa fa-film"></i>
 						<h4 class="text-left">Demonstração em Vídeo</h4>
@@ -144,14 +165,22 @@
 					</br>
 
 					<h3 id="subtracao" class="title text-left">Subtração</h3>
-					<p>Com a subtração binária, começa a ficar um pouco mais complexo (mas não tão difícil). Semelhante à adição binária, trabalharemos os números coluna por coluna e emprestaremos de volta (quando necessário). Estrutura da operação é minuendo - subtraendo = diferença
-					</br></br>
+					<p>Com a subtração binária, começa a ficar um pouco mais complexo (mas não tão difícil). Semelhante à adição binária, trabalharemos os números coluna por coluna e emprestaremos de volta (quando necessário).</p>
+					Pontos principais a se considerar:
+					</br>
+					<p>
+					<ul>
+						<li type="circle">Estrutura da operação: minuendo - subtraendo = diferença</li>
+						<li type="circle">É necessário considerar que o número 0 é um elemento neutro, somente nos casos onde o minuendo>=0 (o contrário pode provocar uma inversão de sinal e neste curso não será tratado sobre como representar sinais ou número negativos com binário)</li>
+						<li type="circle">Quando em uma operação o subtraendo for menor que o minuendo, acontece a operação de carry in, ou “empresta 1 do vizinho a esquerda (do outro registrador)”</li>
+					</ul>
+					</p>
+					<p>
+					</br>
 					Decimal:</br>
-					1 - 0 = 1</br>
-					2 - 0 = 2</br>
-					3 - 0 = 3</br>
+					1 - 0 = -1</br>
 					3 - 2 = 1</br>
-					4 -3 = 1</br>
+					4 - 3 = 1</br>
 					2 - 2 = 0</br>
 					</br>
 					Binário (as quatro operações básicas):</br>
@@ -160,32 +189,61 @@
 					1 - 1 = 0</br>
 					0 - 1 = 1 (onde o 0 empresta 1 do vizinho ao lado esquerdo, deste modo a operação fica 10 - 1 = 1 ou na base 10: 2 - 1 = 1)</br>
 					</p>
+					<div class="text-center">
+						<img src="./img/GIF5.gif" class="rounded" alt="...">
+					</div>
+					</br>
 
 					</br>
 
 					<h3 id="multiplicacao" class="title text-left">Multiplicação</h3>
-					<p>A multiplicação possui como centro a propriedade comutativa (“a ordem dos fatores não altera o produto”), ou seja A*B = B*A. Neste caso temos as operações básicas em binários:</br>
+					<p>A multiplicação possui como centro a propriedade comutativa (“a ordem dos fatores não altera o produto”), ou seja A*B = B*A. Neste caso temos as operações básicas em binários: </p>
+					Pontos principais a se considerar:
+					</br>
+					<p>
+					<ul>
+						<li type="circle">Estrutura da operação: fator * fator = produto</li>
+						<li type="circle">Neste caso, o 0 não é um elemento neutro, assim como no decimal. Qualquer coisa multiplicada por 0 será 0</li>
+					</ul>
+					</p>
 					</br>
 					0 * 0 = 0</br>
 					0 * 1 = 0</br>
 					1 * 0 = 0</br>
 					1 * 1 = 1</br>
+					</p>
+					<div class="text-center">
+						<img src="./img/GIF4.gif" class="rounded" alt="...">
+					</div>
 					</br>
-					Na multiplicação (a mais simples operação de todas), tudo o que é multiplicado por 0 terá como resultado final 0.
+					<p>
+					Na multiplicação (a mais simples operação de todas), tudo o que é multiplicado por 0 terá como resultado final 0. Por isso tudo ou será 0 ou 1, sem haver a necessidade de “carry”.
+					Uma outra analogia que podemos fazer com a multiplicação, na área de sistemas digitais, é ela aplicar o mesmo funcionamento das portas AND (saiba mais - link sistemas digitais).
 					</p>
 
 					</br>
 
 					<h3 id="divisao" class="title text-left">Divisão</h3>
 					<p>
-					A divisão possui como estrutura: divisor / dividendo = quociente.
-					</br></br>
+					A divisão consiste em dividir em partes fracionadas um número (uma parte), este conceito  remete as partes fracionárias.</p>
+					Pontos principais a se considerar:
+					</br>
+					<p>
+					<ul>
+					<li type="circle">Estrutura da operação: divisor / dividendo = quociente</li>
+					<li type="circle">Neste caso, o 0 não é um elemento neutro, assim como no decimal. Qualquer coisa multiplicada por 0 será 0</li>
+					</ul>
+					</p>
+					</br>
 					0 / 0 = Não existe, assim comos nos decimais</br>
 					0 / 1 = 0</br>
 					1 / 0 = Não existe, assim como como nos decimais</br>
 					1 / 1 = 1</br>
-					</br>
 					</p>
+					<div class="text-center">
+						<img src="./img/GIF3.gif" class="rounded" alt="...">
+					</div>
+					</br>
 			</div>
 			<!-- /Row -->
 
@@ -200,9 +258,11 @@
 				<div class="section-header text-left">
 					<h2 class="title">Conclusão</h2>
 					<p  align="left">
-					Algumas sugestões:</br>
-				    Para números menores (8 dígitos ou menos) adquira o hábito de convertê-los mentalmente em decimal (por exemplo, para 111 você pode dizer: "Ah, isso é 1 + 2 + 4, que é 8"). Isso ajuda a dar significado em vez de apenas serem coisas abstratas em que você está realizando ações aleatórias.
-				    Aprender binário é como andar de bicicleta, a melhor maneira é fazendo! Então deixamos aqui uma ferramenta para seus estudos, podendo gerar valores aleatórios para treinar:
+				    O conteúdo da soma, subtração, multiplicação e divisão seguem os mesmos padrões da aritmética básica decimal, quando utilizamos o sistema básico de numeração binário. Na multiplicação tudo será ou 0 ou 1 e não, sendo uma das operações mais básicas. A soma também segue os mesmos princípios da simplicidade da multiplicação. A divisão é apresentada de maneira com que haja multiplicação por pares do dividendo (o mesmo princípio matemático com os decimais).
+					</p>
+					<p  align="left">
+					Para números menores (8 dígitos ou menos) adquira o hábito de convertê-los mentalmente em decimal (por exemplo, para 111 você pode dizer: "Ah, isso é 1 + 2 + 4, que é 8"). Isso ajuda a dar significado em vez de apenas serem coisas abstratas em que você está realizando ações aleatórias. 
+					Aprender binário é como andar de bicicleta, a melhor maneira é fazendo! Então deixamos aqui uma ferramenta para seus estudos, podendo gerar valores aleatórios para treinar:  
 					<p></br>
 					<h3 class="text-left">Gerador de Operações Binárias:</h3>
 					<ul class='activities'>
@@ -210,6 +270,7 @@
 							<span class='questiontitle'>Adição: </span></br>
 							<input class="btn btn-info" type='button' value='Gerar Operação' id='questionadditiongenerate' onclick="activityAdditionGenerate()">
 							<span id='additionactivity' class='activityquestion'></span></br></br>
+
 							<input class="btn btn-info" type='button' value='Resposta' id='additionshow' onclick="additionShow()">
 							<span id='additionanswer' class='activityanswer'></span>
 						</li>
@@ -218,6 +279,7 @@
 							<span class='questiontitle'>Subtração: </span></br>
 							<input class="btn btn-info" type='button' value='Gerar Operação' id='questionsubtractiongenerate' onclick="activitySubtractionGenerate()">
 							<span id='subtractionactivity' class='activityquestion'></span></br></br>
+
 							<input class="btn btn-info" type='button' value='Resposta' id='subtractionshow' onclick="subtractionShow()">
 							<span id='subtractionanswer' class='activityanswer'></span>
 						</li>
@@ -226,6 +288,7 @@
 							<span class='questiontitle'>Multiplicação: </span></br>
 							<input class="btn btn-info" type='button' value='Gerar Operação' id='questionmultiplicationgenerate' onclick="activityMultiplicationGenerate()">
 							<span id='multiplicationactivity' class='activityquestion'></span></br></br>
+
 							<input class="btn btn-info" type='button' value='Resposta' id='multiplicationshow' onclick="multiplicationShow()">
 							<span id='multiplicationanswer' class='activityanswer'></span>
 						</li>
@@ -234,6 +297,7 @@
 							<span class='questiontitle'>Divisão: </span></br>
 							<input class="btn btn-info" type='button' value='Gerar Operação' id='questiondivisiongenerate' onclick="activityDivisionGenerate()">
 							<span id='divisionactivity' class='activityquestion'></span></br></br>
+
 							<input class="btn btn-info" type='button' value='Resposta' id='divisionshow' onclick="divisionShow()">
 							<span id='divisionanswer' class='activityanswer'></span>
 						</li>
@@ -253,7 +317,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="section-header text-left">
-					<h2 class="title">questionario</h2>
+					<h2 class="title">Questionário</h2>
 				</div>
 				<div class="col-sm-8">
 					<div class="questionario">
@@ -288,7 +352,6 @@
 		  					  		<label for="instit">Curso</label>
 		  					  		<input type="text" id="curso" name="curso" placeholder="Seu curso" required>
 		  					  	</div>
-
 		  					  	<div class="col-sm-12"> 
 				  					</br>
 				  					</br>
@@ -296,10 +359,12 @@
 				  					  	<input type="submit" class="btn btn-info" value="Iniciar Questionário">
 				  					</div>
 			  					</div>
+			  					<input type="hidden" id="acertos" name="acertos">
 			  				</form>
 			  				<div class="col-sm-2"></div>
 			  				<div class="col-sm-10">
-			  					<div id="frame" role="content" style="display: none;"></div>
+			  					<div id="frame" role="content" style="display: none;">
+			  					</div>
 			  				</div>
 					</div>
 				</div>
