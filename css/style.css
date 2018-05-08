@@ -939,3 +939,19 @@ header {
 #back-to-top:hover {
     opacity: 0.8;
 }
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+}
+
+
+.feature-container {
+    position: relative;
+    width: 50%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
